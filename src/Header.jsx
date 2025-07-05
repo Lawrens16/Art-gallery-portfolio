@@ -1,22 +1,31 @@
-function Header() {
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-    return(
-        <header className="headerCss">
-            <nav className='navCss'>
-                <ul className="navMenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    
-                </ul>
-                 
-            </nav>
-              &nbsp;
-            <hr className="hrCss"></hr>
-            
-        </header>
-    );
+function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <>
+      <nav className={`navCss ${isScrolled ? 'scrolled' : ''}`}>
+        <ul className="navMenu">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/gallery">Gallery</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>
+      </nav>
+      <hr className="hrCss" />
+    </>
+  );
 }
 
-export default Header
+export default Header;
