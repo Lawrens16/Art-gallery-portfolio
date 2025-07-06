@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import logo from './assets/logorus.png';
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,14 +16,19 @@ function Header() {
 
   return (
     <>
+       <div className="flex items-center">
+            <img src={logo} alt="Logo" className="h-[89px] w-auto m-0 p-0" />
+        </div>
+        
       <nav className={`navCss ${isScrolled ? 'scrolled' : ''}`}>
         <ul className="navMenu">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/gallery">Gallery</Link></li>
           <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          
         </ul>
       </nav>
+      
       <hr className="hrCss" />
     </>
   );

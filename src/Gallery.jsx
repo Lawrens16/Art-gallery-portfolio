@@ -51,6 +51,8 @@ function Gallery() {
         </select>
       </div>
 
+      
+
       <div className="masonryGrid">
         {sortedArtworks.map((art, index) => (
           <div key={art.id} className="masonryItem" onClick={() => openLightbox(index)}>

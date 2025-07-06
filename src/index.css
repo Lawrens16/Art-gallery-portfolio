@@ -1,3 +1,11 @@
+
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
 :root{
     background-color: hsl(0, 3%, 7%);
     color:hsl(0, 0%, 100%)
@@ -50,7 +58,6 @@
     min-height: 100vh;
 }
 
-
 .Hidden {
   opacity: 0;
   /*transform: translateX(-100%);*/
@@ -102,14 +109,19 @@ h1 {
   background-color: transparent;
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 8px 12px;
+  padding: 8px 36px 8px 12px;
   border-radius: 6px;
   font-size: 14px;
   font-family: Arial, sans-serif;
   appearance: none;
+  
   outline: none;
   cursor: pointer;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.08 1.04l-4.25 4.25a.75.75 0 01-1.08 0L5.25 8.27a.75.75 0 01-.02-1.06z' clip-rule='evenodd' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
 }
 
 .selectCss:hover {
@@ -184,3 +196,5 @@ h1 {
   padding: 5px;
   user-select: none;
 }
+
+

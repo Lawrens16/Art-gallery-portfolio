@@ -5,6 +5,18 @@ import About from './About.jsx';
 import Contact from './Contact.jsx';
 import Header from './Header.jsx'
 import Footer from './Footer.jsx'
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectScrollDownButton,
+  SelectScrollUpButton,
+  SelectSeparator,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 function App() {
   return (
