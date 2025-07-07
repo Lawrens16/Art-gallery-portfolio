@@ -29,7 +29,7 @@ function About() {
   <>
     <section className="Hidden" style={{ display: 'block' }} ref={(el) => (hiddenRefs.current[0] = el)}>
         <h2 className="aboutDesc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, reprehenderit? Quo, deleniti quam voluptas illum illo quas esse! Animi, placeat. Fugiat eveniet aut nulla consequuntur aspernatur quis at a culpa!</h2>
-
+        <h1>Hi im russel nigga</h1>
       </section>
   </>
   );
