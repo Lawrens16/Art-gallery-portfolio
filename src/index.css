@@ -104,6 +104,11 @@ h1 {
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+.masonryItem:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
 .masonryImage {
   width: 100%;
   display: block;
